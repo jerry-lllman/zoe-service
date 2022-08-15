@@ -1,4 +1,3 @@
-import { VersioningType } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import {
   FastifyAdapter,
@@ -16,10 +15,10 @@ async function bootstrap() {
   );
 
   // 接口版本化管理
-  app.enableVersioning({
-    // defaultVersion: '1',
-    type: VersioningType.URI
-  })
+  // app.enableVersioning({
+  //   // defaultVersion: '1',
+  //   type: VersioningType.URI
+  // })
 
   // 统一响应体格式
   app.useGlobalInterceptors(new TransformInterceptor());
